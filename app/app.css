@@ -209,7 +209,7 @@ html, body
 .Package-Card
 {
   background-color: rgb(38, 28, 30);
-  border: 4px solid red;
+  border: 4px solid rgb(200, 24, 24);
   border-radius: 10px;
   padding: 1rem;
   

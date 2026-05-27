@@ -16,6 +16,9 @@ const Package = ({ packageName, packageDesc, details, price }: PackageProps) => 
         <p className="text-[1.2rem] text-center font-bold italic">{price}</p>
         <button className="CTABtn uppercase" onClick={() => scrollToSection('contact')}>Get in touch</button>
       </div>
+      <div>
+        <p className="text-[1.2rem] text-center italic">First time client gets <span className="text-red-500">15%</span> off!</p>
+      </div>
     </div>
   )
 }
