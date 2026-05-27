@@ -21,7 +21,7 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/gusaila-m%C3%A1rk%C3%B3/" target="_blank">Contact me on LinkedIn</a>
                 </div>
                 <div className="flex justify-center items-center gap-[0.5rem]">
-                    <img src="/icons/fiverr-icon.png" alt="Fiverr Logo" className="FiverrLogo" />
+                    <img src="/icons/fiverr-icon.webp" alt="Fiverr Logo" className="FiverrLogo" />
                     <a href="https://www.fiverr.com/gusaila_marko/create-you-a-fully-customised-webpage-to-your-desires?context_referrer=tailored_homepage_perseus&source=recently_viewed_gigs&ref_ctx_id=5ce3bad784d9447d933524454e9cec1f&context=recommendation&pckg_id=1&pos=1&context_alg=recently_viewed&seller_online=true&imp_id=479f2c04-979a-4d0f-ade3-bc25e9c952f7" target="_blank">Contact me on Fiverr</a>
                 </div>
             </div>

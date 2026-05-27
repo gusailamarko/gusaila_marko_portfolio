@@ -14,7 +14,7 @@ html, body
 .Intro
 {
   height: 100dvh;
-  background-image: url("imgs/intro_background.jpg");
+  background-image: url("imgs/intro_background.webp");
   border-bottom: 1px solid red;
 }
 
@@ -169,8 +169,9 @@ html, body
 /*Pricing section*/
 .Pricing-Container
 {
-  background-image: url(/imgs/pricing_bg.avif);
+  background-image: url(/imgs/pricing_bg.webp);
   background-size: cover;
+  background-position: center;
   border-bottom: 1px solid red;
 }
 
@@ -206,7 +207,7 @@ html, body
 /*Contact section*/
 .Contact-Container
 {
-  background-image: url(/imgs/contactme_bg.jpg);
+  background-image: url(/imgs/contactme_bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 1px solid red;
