@@ -10,11 +10,34 @@ html, body
   color: white;
 }
 
+/*Scrollbar*/
+::-webkit-scrollbar 
+{
+  width: 5px;
+  height: 5px;
+}
+  
+::-webkit-scrollbar-track 
+{
+  background: #2c2c2c; 
+}
+   
+
+::-webkit-scrollbar-thumb 
+{
+  background: red; 
+}
+  
+::-webkit-scrollbar-thumb:hover 
+{
+  background: red; 
+}
+
 /*Intro/Hero section*/
 .Intro
 {
   height: 100dvh;
-  background-image: url("imgs/intro_background.webp");
+  background-image: url("/imgs/intro_background.webp");
   border-bottom: 1px solid red;
 }
 
