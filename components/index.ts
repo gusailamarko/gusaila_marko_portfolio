@@ -1,0 +1,9 @@
+export {default as Nav} from "./Nav";
+export {default as MobileNav} from "./MobileNav";
+export {default as Intro} from "./Intro";
+export {default as Projects} from "./Projects";
+export {default as Pricing} from "./Pricing";
+export {default as Package} from "./Package";
+export {default as Contact} from "./Contact";
+export {default as Footer} from "./Footer";
+export {default as Alert} from "./Alert";

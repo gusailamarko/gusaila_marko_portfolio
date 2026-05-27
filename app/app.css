@@ -5,11 +5,276 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+html, body 
+{
+  color: white;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+/*Intro/Hero section*/
+.Intro
+{
+  height: 100dvh;
+  background-image: url("imgs/intro_background.jpg");
+  border-bottom: 1px solid red;
+}
+
+.Nav
+{
+  background-color: rgba(58, 55, 55, 0.5);
+}
+
+.NavItem
+{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.NavItem:hover
+{
+  cursor: pointer;
+  color: red;
+}
+
+.NavBtn, .CTABtn, .SubmitBtn
+{
+  background-color: red;
+  padding: 0.5rem;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+}
+
+.NavBtn:hover, .CTABtn:hover, .SubmitBtn:hover
+{
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px red;
+}
+
+/*Projects section*/
+.Projects-Container
+{
+  background: 
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(139, 0, 0, 0.08) 10px,
+      rgba(139, 0, 0, 0.08) 20px
+    ),
+    linear-gradient(-45deg, #0d0a0a 25%, red 50%, #0d0a0a 75%);
+  border-bottom: 1px solid red;
+
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Project-Card
+{
+  background-color: rgb(38, 28, 30);
+  border: 2px solid red;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 2px rgb(38, 40, 42);
+
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  position: relative;
+  top: -4rem;
+}
+
+.Carousel
+{
+  border: 2px solid black;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  height: 325px;
+  width: 100%;
+
+  position: relative;
+}
+
+.Carousel img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  /*.Projects-Container
+  {
+    height: 90dvh;
+  }*/
+
+  .Carousel img 
+  {
+    object-fit: fill;
   }
+}
+
+.Carousel-prevBtn
+{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.Carousel-nextBtn
+{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.Tag
+{
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.WebLink
+{
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.WebLink:hover
+{
+  background-color: red;
+  color: black;
+  border-radius: 10px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/*Pricing section*/
+.Pricing-Container
+{
+  background-image: url(/imgs/pricing_bg.avif);
+  background-size: cover;
+  border-bottom: 1px solid red;
+}
+
+.Package-Card
+{
+  background-color: rgb(38, 28, 30);
+  border: 4px solid red;
+  border-radius: 10px;
+  padding: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /*min-height: 450px;*/
+}
+
+.Package-Title
+{
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.Package-Inquiry
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+/*Contact section*/
+.Contact-Container
+{
+  background-image: url(/imgs/contactme_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid red;
+}
+
+.Client-Review
+{
+  background-color: rgb(38, 28, 30);
+  padding: 1rem;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+.Contact-Content
+{
+  background-color: rgb(38, 28, 30);
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+form
+{
+  background-color: rgb(38, 28, 30);
+}
+
+input, textarea, select
+{
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 10px;
+}
+
+option
+{
+  color: black;
+}
+
+.ContactViaFiverr
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #1DBF73;
+  border-radius: 10px;
+  background-color: rgb(49, 46, 46);
+  font-weight: bold;
+  color: #1DBF73;
+}
+
+.FiverrLogo
+{
+  width: 24px;
+  height: 24px;
+}
+
+.ContactViaFiverr:hover
+{
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px #1DBF73;
+  background-color: #1DBF73;
+  color: white;
+}
+
+/*Footer section*/
+footer
+{
+  background-color: rgb(32,36,37);
 }
