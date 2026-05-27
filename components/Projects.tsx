@@ -32,7 +32,7 @@ const Projects = () => {
 
   return (
     <div className="Projects-Container">
-        <div className="Project-Card w-[85%] md:w-[60%] gap-[1rem]" id="projects">
+        <div className="Project-Card w-[85%] md:w-[70%] gap-[1rem]" id="projects">
             <div className="flex items-center justify-between w-full">
                 <p onClick={PreviousProject} className="cursor-pointer text-[0.75rem] md:text-[1rem]">👈Prev</p>
                 <h2 className="text-[1.2rem] md:text-[1.5rem] font-bold">{project.title}</h2>

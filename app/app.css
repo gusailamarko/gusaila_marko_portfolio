@@ -118,10 +118,18 @@ html, body
   border: 2px solid black;
   border-radius: 10px;
   aspect-ratio: 1/1;
-  height: 325px;
+  height: 35rem;
   width: 100%;
 
   position: relative;
+}
+
+@media (max-width: 767px)
+{
+  .Carousel
+  {
+    height: 250px;
+  }
 }
 
 .Carousel img
