@@ -63,5 +63,11 @@ export const clientReviews = [
         clientType: "Fiverr client",
         rating: "5.0",
         review: "Good quality and fast delivery.",
+    },
+    {
+        username: "Béla V.",
+        clientType: "Artist (VillaDecor)",
+        rating: "5.0",
+        review: "Nice modern, quality work."
     }
 ]

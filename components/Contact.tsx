@@ -1,6 +1,6 @@
 import { DisplayRatingAsStars } from "~/lib/utils"
 import { clientReviews } from "~/constants/texts"
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
 import Alert from "./Alert";
 
@@ -43,6 +43,26 @@ const Contact = () => {
       })
   }
 
+  const [feedbackIdx, setFeedbackIdx] = useState(0);
+
+  const PrevReview = () => {
+    setFeedbackIdx((prevIndex) => prevIndex === 0 ? clientReviews.length - 1 : prevIndex - 1)
+  }
+
+  const NextReview = () => {
+    setFeedbackIdx((prevIndex) => prevIndex === clientReviews.length - 1 ? 0 : prevIndex + 1);
+  }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        setTimeout(() => {
+          setFeedbackIdx((prev) => prev === clientReviews.length - 1 ? 0 : prev + 1);
+        }, 5000);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       <div id="contact" className="flex flex-col md:flex-row items-center justify-center gap-[5rem] md:gap-[2rem] py-[3rem] Contact-Container">
@@ -50,22 +70,32 @@ const Contact = () => {
           <div className="text-center">
             <h3 className="text-[1.5rem] font-bold tracking-wider uppercase">Client feedback:</h3>
           </div>
-          <div className="flex items-center gap-[1rem] w-full Client-Review">
-            <div className="flex justify-center w-[20%]">
+          <div className="flex items-center justify-evenly gap-[0.5rem] w-full Client-Review">
+            <div onClick={PrevReview} className="cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg>
+            </div>
+            <div className="hidden lg:flex justify-center w-[15%]">
               <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" className="bi bi-person-circle" viewBox="0 0 16 16">
                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                 <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
               </svg>
             </div>
-            <div className="flex flex-col items-start gap-[0.5rem] w-[70%]">
+            <div key={feedbackIdx} className="flex flex-col items-start gap-[0.5rem] w-[70%] Feedback">
               <div>
-                <p className="font-bold">{clientReviews[0].username} <span className="text-red-500 italic font-normal">- {clientReviews[0].clientType}</span></p>
+                <p className="font-bold">{clientReviews[feedbackIdx].username} <span className="text-red-500 italic font-normal">- {clientReviews[feedbackIdx].clientType}</span></p>
               </div>
               <hr className="w-full" />
-              <div>{DisplayRatingAsStars(clientReviews[0].rating)}</div>
+              <div>{DisplayRatingAsStars(clientReviews[feedbackIdx].rating)}</div>
               <div>
-                <p>"<span className="italic">{clientReviews[0].review}</span>"</p>
+                <p>"<span className="italic">{clientReviews[feedbackIdx].review}</span>"</p>
               </div>
+            </div>
+            <div onClick={NextReview} className="cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
             </div>
           </div>
         </div>
