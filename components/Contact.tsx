@@ -57,8 +57,8 @@ const Contact = () => {
     const interval = setInterval(() => {
         setTimeout(() => {
           setFeedbackIdx((prev) => prev === clientReviews.length - 1 ? 0 : prev + 1);
-        }, 5000);
-    }, 5000);
+        }, 8000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
