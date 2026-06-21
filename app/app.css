@@ -8,6 +8,9 @@
 html, body 
 {
   color: white;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/imgs/background.webp");
 }
 
 /*Scrollbar*/
@@ -37,8 +40,8 @@ html, body
 .Intro
 {
   height: 100dvh;
-  background-image: url("/imgs/intro_background.webp");
-  border-bottom: 1px solid red;
+  /*background-image: url("/imgs/intro_background.webp");
+  border-bottom: 1px solid red;*/
 }
 
 .Nav
@@ -75,10 +78,17 @@ html, body
   box-shadow: 0 0 10px 2px red;
 }
 
+.Myself
+{
+  height: clamp(35rem, 45vw, 40rem);
+  width: 100%;
+  object-fit: cover;
+}
+
 /*Projects section*/
 .Projects-Container
 {
-  background: 
+  /*background: 
     repeating-linear-gradient(
       -45deg,
       transparent,
@@ -87,7 +97,7 @@ html, body
       rgba(139, 0, 0, 0.08) 20px
     ),
     linear-gradient(-45deg, #0d0a0a 25%, red 50%, #0d0a0a 75%);
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid red;*/
 
   width: 100%;
   height: auto;
@@ -109,8 +119,8 @@ html, body
   align-items: center;
   padding: 1rem;
 
-  position: relative;
-  top: -4rem;
+  /*position: relative;
+  top: -4rem;*/
 }
 
 .Carousel
@@ -203,10 +213,10 @@ html, body
 /*Pricing section*/
 .Pricing-Container
 {
-  background-image: url(/imgs/pricing_bg.webp);
+  /*background-image: url(/imgs/pricing_bg.webp);
   background-size: cover;
   background-position: center;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid red;*/
 }
 
 .Package-Card
@@ -241,10 +251,10 @@ html, body
 /*Contact section*/
 .Contact-Container
 {
-  background-image: url(/imgs/contactme_bg.webp);
+  /*background-image: url(/imgs/contactme_bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid red;*/
 }
 
 .Client-Review
@@ -331,4 +341,5 @@ option
 footer
 {
   background-color: rgb(32,36,37);
+  border-top: 2px solid red;
 }

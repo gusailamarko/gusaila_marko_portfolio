@@ -31,7 +31,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="Projects-Container">
+    <div className="Projects-Container py-[5rem]">
         <div className="Project-Card w-[85%] md:w-[70%] gap-[1rem]" id="projects">
             <div className="flex items-center justify-between w-full">
                 <p onClick={PreviousProject} className="cursor-pointer text-[0.75rem] md:text-[1rem]">👈Prev</p>

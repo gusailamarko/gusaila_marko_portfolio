@@ -65,7 +65,7 @@ const Contact = () => {
 
   return (
     <>
-      <div id="contact" className="flex flex-col md:flex-row items-center justify-center gap-[5rem] md:gap-[2rem] py-[3rem] Contact-Container">
+      <div id="contact" className="flex flex-col md:flex-row items-center justify-center gap-[5rem] md:gap-[2rem] py-[5rem] Contact-Container">
         <div className="flex flex-col w-[80%] md:w-[40%] gap-[1rem]">
           <div className="text-center">
             <h3 className="text-[1.5rem] font-bold tracking-wider uppercase">Client feedback:</h3>
